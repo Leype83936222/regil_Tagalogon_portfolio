@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regil Tagalogon | Programmer & Developer Portfolio</title>
+    <!-- Primary SEO Metadata -->
+    <meta name="description" content="Portfolio of Regil Tagalogon, a passionate Programmer and Fresh IT Graduate specializing in web development, databases, and building efficient desktop/mobile solutions.">
+    <meta name="keywords" content="Regil Tagalogon, Programmer, Software Developer, IT Graduate, Portfolio, Web Developer, Supabase, Firebase, React Native, Python">
+    <meta name="author" content="Regil Tagalogon">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Regil Tagalogon | Programmer & Developer Portfolio">
+    <meta property="og:description" content="Explore the software projects, technical skills, achievements, and professional timeline of Regil Tagalogon, Programmer & Fresh IT Graduate.">
+    <meta property="og:image" content="./assets/83308644-55d7-469b-8379-caaf1fa067c8.jpg">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Regil Tagalogon | Programmer & Developer Portfolio">
+    <meta name="twitter:description" content="Explore the software projects, technical skills, achievements, and professional timeline of Regil Tagalogon, Programmer & Fresh IT Graduate.">
+    <meta name="twitter:image" content="./assets/83308644-55d7-469b-8379-caaf1fa067c8.jpg">
+    
+    <script>
+        (function() {
+            var theme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', theme);
+            var icon = theme === 'dark' ? 'sun' : 'moon';
+            document.addEventListener('DOMContentLoaded', function() {
+                document.querySelectorAll('#theme-toggle i, #theme-toggle-mobile i').forEach(function(el) {
+                    el.setAttribute('data-lucide', icon);
+                });
+            });
+        })();
+    </script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=JetBrains+Mono&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body data-theme="dark">
+    <!-- Preloader Screen -->
+    <div id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p class="gradient-text" style="font-weight: 700; margin-top: 1.5rem; font-family: var(--font-mono); letter-spacing: 0.15em; font-size: 0.85rem;">INITIALIZING PORTFOLIO</p>
+        </div>
+    </div>
+
+    <!-- Animated Premium Background -->
+    <div class="gradient-mesh-bg"></div>
+    <canvas id="bg-canvas"></canvas>
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+        <div class="sidebar-profile">
+            <div style="position: relative; display: inline-block;">
+                <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Profile"
+                    id="profile-preview"
+                    style="background: rgba(255,255,255,0.1); width: 150px; height: 150px; object-fit: cover;">
+                <button class="glass"
+                    style="position: absolute; bottom: 10px; right: 10px; padding: 0.4rem; cursor: pointer; border: none; border-radius: 50%;"
+                    onclick="document.getElementById('profile-upload').click()">
+                    <i data-lucide="camera" style="width: 14px; height: 14px;"></i>
+                </button>
+                <input type="file" id="profile-upload" style="display: none;" accept="image/*"
+                    onchange="previewBentoImage(this)">
+            </div>
+            <h2>Regil <span class="gradient-text">Tagalogon</span></h2>
+            <p style="font-size: 0.8rem; color: var(--text-secondary);">Programmer | Fresh Graduate (March 2026)</p>
+        </div>
+
+        <nav class="sidebar-nav">
+            <ul class="nav-links">
+                <li><a href="#home"><i data-lucide="home"></i> Home</a></li>
+                <li><a href="#about"><i data-lucide="user"></i> About</a></li>
+                <li><a href="#projects"><i data-lucide="layout"></i> Projects</a></li>
+                <li><a href="#blog"><i data-lucide="pen-tool"></i> Blog</a></li>
+                <li><a href="#contact"><i data-lucide="mail"></i> Contact</a></li>
+            </ul>
+        </nav>
+
+        <div style="margin-top: auto; width: 100%; display: flex; justify-content: space-between; align-items: center;">
+            <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                <i data-lucide="moon"></i>
+            </button>
+            <div style="display: flex; gap: 0.8rem; align-items: center;">
+                <a href="#admin" title="Admin Login" style="display: inline-flex; align-items: center;"><i data-lucide="lock" style="width: 18px; height: 18px; color: var(--text-secondary);"></i></a>
+                <a href="https://github.com/Leype83936222" target="_blank" title="GitHub"><i data-lucide="github"
+                        style="width: 20px;"></i></a>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Mobile Navigation (Bottom Bar) -->
+    <nav class="mobile-nav">
+        <!-- Mobile Profile Pic -->
+        <a href="#" onclick="document.getElementById('profile-upload').click(); return false;"
+            class="mobile-profile-link"
+            style="border: 2px solid var(--accent-primary); border-radius: 50%; overflow: hidden; width: 40px; height: 40px; display: block; flex-shrink: 0;">
+            <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Profile"
+                style="width: 100%; height: 100%; object-fit: cover; background: rgba(255,255,255,0.1);">
+        </a>
+
+        <a href="#home" class="mobile-link"><i data-lucide="home"></i></a>
+        <a href="#about" class="mobile-link"><i data-lucide="user"></i></a>
+        <a href="#projects" class="mobile-link active-link"><i data-lucide="layout"></i></a>
+        <a href="#trainings" class="mobile-link"><i data-lucide="presentation"></i></a>
+        <a href="#contact" class="mobile-link"><i data-lucide="mail"></i></a>
+        <button class="mobile-link theme-toggle-mobile" id="theme-toggle-mobile">
+            <i data-lucide="moon"></i>
+        </button>
+    </nav>
+
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <span class="gradient-text"
+                        style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.25em; font-family: var(--font-mono); font-size: 0.9rem;">Portfolio 2026</span>
+                    <h1 style="font-size: 5rem; margin-top: 1rem;">Regil <span class="gradient-text">Tagalogon</span></h1>
+                    <p style="font-size: 1.35rem; margin-top: 2rem; min-height: 80px; line-height: 1.8;">I am a Programmer and a fresh graduate. I build powerful digital solutions with precision and creativity.</p>
+                    <div style="display: flex; gap: 1rem; margin-top: 3rem; flex-wrap: wrap;" class="hero-actions">
+                        <a href="#projects" class="btn btn-primary">View Projects <i data-lucide="layout"></i></a>
+                        <a href="#" class="btn btn-secondary" id="hero-resume-btn" style="border: 1px solid var(--border-color);"><i data-lucide="download"></i> Download Resume</a>
+                        <a href="#contact" class="btn btn-tertiary" style="border: 1px solid transparent;">Contact Me <i data-lucide="mail"></i></a>
+                    </div>
+                </div>
+                <div class="profile-container">
+                    <div class="profile-blob"></div>
+                    <img src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" alt="Regil Tagalogon" class="profile-img" id="hero-profile-preview" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=320&auto=format&fit=crop'">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card glass">
+                        <i data-lucide="code-2" class="gradient-text"
+                            style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
+                        <span class="stat-number gradient-text">4</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <i data-lucide="award" class="gradient-text"
+                            style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
+                        <span class="stat-number gradient-text">1</span>
+                        <span class="stat-label">Achievement</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <i data-lucide="scroll-text" class="gradient-text"
+                            style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
+                        <span class="stat-number gradient-text">1</span>
+                        <span class="stat-label">Certificate</span>
+                    </div>
+                    <div class="stat-card glass">
+                        <i data-lucide="coffee" class="gradient-text"
+                            style="width: 32px; height: 32px; margin-bottom: 1rem;"></i>
+                        <span class="stat-number gradient-text">∞</span>
+                        <span class="stat-label">Coffee Cups</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="glass about-card-wrapper" style="padding: 3.5rem; border-radius: 32px; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <span class="gradient-text" style="font-weight: 700; text-transform: uppercase; letter-spacing: 0.15em; font-size: 0.85rem; font-family: var(--font-mono);">GET TO KNOW ME</span>
+                        <h2 style="font-size: 2.8rem; margin-top: 0.5rem; margin-bottom: 1.5rem;">About <span class="gradient-text">Myself</span></h2>
+                        <p id="about-bio" style="color: var(--text-secondary); margin-bottom: 2rem; font-size: 1.1rem; line-height: 1.8;">I am Regil Tagalogon, a dedicated Programmer focused on building efficient and scalable applications. As a fresh graduate (Batch March 2026), I am eager to apply my technical expertise to real-world challenges.</p>
+                        <div id="about-highlights" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.5rem;">
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                                <i data-lucide="check-circle" style="color: var(--accent-primary); width: 22px; height: 22px;"></i>
+                                <span style="font-weight: 600;">Software Development</span>
+                            </div>
+                            <div class="highlight-item" style="display: flex; align-items: center; gap: 0.75rem; background: rgba(255,255,255,0.02); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-color);">
+                                <i data-lucide="check-circle" style="color: var(--accent-primary); width: 22px; height: 22px;"></i>
+                                <span style="font-weight: 600;">Full-Stack Programming</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="about-visual" style="display: flex; flex-direction: column; gap: 2rem; text-align: center;">
+                        <div style="background: linear-gradient(135deg, rgba(0, 242, 255, 0.03), rgba(112, 0, 255, 0.03)); border: 1px solid var(--border-color); border-radius: 24px; padding: 2.5rem;" class="about-visual-card">
+                            <i data-lucide="cpu" style="width: 48px; height: 48px; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+                            <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem; font-weight:700;">Continuous Growth</h4>
+                            <p style="font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6;">Constantly exploring new tools and design frameworks to build polished user experiences.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" style="background: rgba(255,255,255,0.005); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Technical <span class="gradient-text">Skills</span></h2>
+                    <p>My core toolkit for building modern applications, sorted by category.</p>
+                </div>
+                <div class="skills-tabs" id="skills-tabs-nav" style="justify-content: center; margin-bottom: 3rem;">
+                    <!-- Dynamic Skills category tabs -->
+                </div>
+                <div class="skills-grid-container" id="skills-list">
+                    <!-- Dynamic Skill Cards -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education Section -->
+        <section id="timeline-section" style="background: rgba(255,255,255,0.01);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Experience & <span class="gradient-text">Education</span></h2>
+                    <p>My professional and academic journey timeline.</p>
+                </div>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start;" id="timeline-grid">
+                    <div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="briefcase" style="color: var(--accent-primary);"></i> Work Experience
+                        </h3>
+                        <div class="timeline" id="experience-timeline">
+                            <!-- Dynamic Experience will be loaded here -->
+                        </div>
+                    </div>
+                    <div>
+                        <h3 style="font-size: 1.8rem; margin-bottom: 2rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <i data-lucide="graduation-cap" style="color: var(--accent-primary);"></i> Education
+                        </h3>
+                        <div class="timeline" id="education-timeline">
+                            <!-- Dynamic Education will be loaded here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>The <span class="gradient-text">Projects</span></h2>
+                    <p>A collection of my technical work and creative experiments.</p>
+                </div>
+
+                <div class="skills-tabs" id="project-categories" style="justify-content: center; margin-bottom: 3rem;">
+                    <!-- Dynamic project category filters -->
+                </div>
+
+                <div class="bento-grid" id="projects-list">
+                    <!-- Dynamic projects will render here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievements Section -->
+        <section id="achievements">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Awards & <span class="gradient-text">Certificates</span></h2>
+                    <p>Milestones in my professional journey.</p>
+                </div>
+                
+                <div class="bento-grid" id="achievements-list">
+                    <!-- Dynamic achievements and certificates will load here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seminars & Trainings Section -->
+        <section id="trainings" style="background: var(--bg-glass);">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Seminars & <span class="gradient-text">Trainings</span></h2>
+                    <p>Professional development and workshops attended.</p>
+                </div>
+                <div class="bento-grid" id="trainings-list">
+                    <!-- Dynamic seminars and trainings will load here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Let's <span class="gradient-text">Connect</span></h2>
+                    <p>Have a project in mind? Let's build something amazing together.</p>
+                </div>
+                <div class="glass" style="max-width: 600px; margin: 0 auto; padding: 3rem;">
+                    <form action="https://formsubmit.co/Regiltagalogon55@gmail.com" method="POST" id="contact-form"
+                        style="display: grid; gap: 1.5rem;">
+                        <!-- Honeypot -->
+                        <input type="text" name="_honey" style="display:none">
+                        <!-- Disable Captcha -->
+                        <input type="hidden" name="_captcha" value="false">
+                        <!-- Success Page -->
+                        <input type="hidden" name="_next" value="http://localhost:5173/">
+
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label for="name" style="font-weight: 600; font-size: 0.9rem;">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Name" class="glass" required
+                                style="padding: 1rem; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        </div>
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label for="email" style="font-weight: 600; font-size: 0.9rem;">Email Address</label>
+                            <input type="email" id="email" name="email" placeholder="email@example.com" class="glass"
+                                required
+                                style="padding: 1rem; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        </div>
+                        <div style="display: grid; gap: 0.5rem;">
+                            <label for="message" style="font-weight: 600; font-size: 0.9rem;">Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..."
+                                class="glass" required
+                                style="padding: 1rem; color: var(--text-primary); border: 1px solid var(--border-color);"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="justify-content: center;">Send Message <i
+                                data-lucide="send"></i></button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-links" id="footer-social-links">
+                    <a href="#" target="_blank"><i data-lucide="facebook"></i></a>
+                    <a href="https://github.com/Leype83936222" target="_blank"><i data-lucide="github"></i></a>
+                    <a href="#" target="_blank"><i data-lucide="instagram"></i></a>
+                </div>
+                <p style="color: var(--text-secondary);">&copy; 2026 Regil Tagalogon Portfolio. All rights reserved. <a href="#admin" style="margin-left: 10px; color: var(--text-secondary); display: inline-flex; align-items: center;" title="Admin Login"><i data-lucide="lock" style="width: 14px; height: 14px;"></i></a></p>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Admin Panel Interface -->
+    <section id="admin" class="admin-view" style="display: none;">
+        <div class="admin-login-container" id="admin-login-container">
+            <div class="admin-card glass" id="admin-login-card">
+                <!-- Setup Form or Login Form loaded dynamically -->
+            </div>
+        </div>
+        
+        <div class="admin-dashboard-container" id="admin-dashboard-container" style="display: none;">
+            <div class="admin-header">
+                <div>
+                    <h1 style="font-size: 2rem;">Admin <span class="gradient-text">Dashboard</span></h1>
+                    <p style="color: var(--text-secondary); font-size: 0.9rem;">Manage your portfolio settings and content.</p>
+                </div>
+                <div style="display: flex; gap: 1rem;">
+                    <a href="#" class="btn" style="border: 1px solid var(--border-color);"><i data-lucide="eye"></i> View Site</a>
+                    <button class="btn btn-primary" id="admin-logout-btn"><i data-lucide="log-out"></i> Logout</button>
+                </div>
+            </div>
+            
+            <nav class="admin-tabs-nav" id="admin-tabs">
+                <button class="admin-tab-btn active" data-tab="about-tab"><i data-lucide="user"></i> About & Bio</button>
+                <button class="admin-tab-btn" data-tab="projects-tab"><i data-lucide="layout"></i> Projects</button>
+                <button class="admin-tab-btn" data-tab="skills-tab"><i data-lucide="award"></i> Skills</button>
+                <button class="admin-tab-btn" data-tab="timeline-tab"><i data-lucide="calendar"></i> Experience & Edu</button>
+                <button class="admin-tab-btn" data-tab="certs-tab"><i data-lucide="scroll-text"></i> Certs & Awards</button>
+                <button class="admin-tab-btn" data-tab="contact-tab"><i data-lucide="mail"></i> Contact Info</button>
+                <button class="admin-tab-btn" data-tab="config-tab"><i data-lucide="settings"></i> Cloud & Security</button>
+                <button class="admin-tab-btn" data-tab="backup-tab"><i data-lucide="database"></i> Backup & Data</button>
+            </nav>
+            
+            <div class="admin-tab-content active" id="about-tab">
+                <!-- About form will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="projects-tab">
+                <!-- Projects management list will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="skills-tab">
+                <!-- Skills management list will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="timeline-tab">
+                <!-- Timeline management list will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="certs-tab">
+                <!-- Certs management list will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="contact-tab">
+                <!-- Contact details form will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="config-tab">
+                <!-- Cloud setup configuration form will render dynamically -->
+            </div>
+            <div class="admin-tab-content" id="backup-tab">
+                <!-- Backup and settings load/export dynamically -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Details Modal -->
+    <div id="project-details-modal" class="modal-overlay" onclick="closeProjectDetails(event)">
+        <div class="modal-card glass project-details-card" style="max-width: 850px;">
+            <button class="modal-close" onclick="closeProjectDetails()"><i data-lucide="x"></i></button>
+            <div class="project-details-content">
+                <!-- Dynamically loaded project details -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to top button -->
+    <button id="back-to-top" title="Back to Top"><i data-lucide="arrow-up"></i></button>
+
+    <!-- Admin Editor Modal -->
+    <div id="admin-modal" class="modal-overlay">
+        <div class="modal-card glass">
+            <button class="modal-close" id="modal-close-btn"><i data-lucide="x"></i></button>
+            <h3 id="modal-title" style="margin-bottom: 1.5rem; font-size: 1.8rem;">Add / Edit Item</h3>
+            <form id="modal-form">
+                <div id="modal-form-fields">
+                    <!-- Loaded dynamically -->
+                </div>
+                <div style="display: flex; justify-content: flex-end; gap: 1rem; margin-top: 2rem;">
+                    <button type="button" class="btn" style="border: 1px solid var(--border-color);" id="modal-cancel-btn">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Toast Notifications Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)"><i data-lucide="x"></i></span>
+        <span class="lightbox-nav lightbox-prev" onclick="changeLightboxImg(-1)"><i
+                data-lucide="chevron-left"></i></span>
+        <div class="lightbox-content">
+            <img id="lightbox-img" class="lightbox-img" src="" alt="View"
+                onclick="changeLightboxImg(1); event.stopPropagation();">
+            <div id="lightbox-counter" class="lightbox-counter">1 / 1</div>
+        </div>
+        <span class="lightbox-nav lightbox-next" onclick="changeLightboxImg(1)"><i
+                data-lucide="chevron-right"></i></span>
+    </div>
+
+    <script type="module" src="./main.js"></script>
+</body>
+
+</html>

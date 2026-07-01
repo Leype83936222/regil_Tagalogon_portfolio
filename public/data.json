@@ -1,0 +1,170 @@
+{
+  "setup": true,
+  "admin": {
+    "username": "regiltagalogon55@gmail.com",
+    "passwordHash": "306aa96c0b8b11f4f309ac8be1f31cff5ed06cc86d359c9e16cf1423f8978e40",
+    "salt": "817287f204a9930b06d36512e668ea61"
+  },
+  "config": {
+    "imageStorage": "local",
+    "imgbbApiKey": "",
+    "cloudinaryCloudName": "",
+    "cloudinaryUploadPreset": "",
+    "supabaseUrl": "",
+    "supabaseKey": ""
+  },
+  "about": {
+    "name": "Regil Tagalogon",
+    "roles": [
+      "Programmer",
+      "Developer",
+      "Fresh IT Graduate"
+    ],
+    "bio": "I am Regil Tagalogon, a dedicated Programmer focused on building efficient and scalable applications. As a fresh graduate (Batch March 2026), I am eager to apply my technical expertise to real-world challenges.",
+    "profileImage": "./assets/536439b8-4039-414a-b1a3-498ce394f6c7-gradpic.jpg",
+    "resumeUrl": "",
+    "stats": {
+      "projects": 5,
+      "achievements": 1,
+      "certificates": 1,
+      "custom": "∞"
+    }
+  },
+  "skills": [
+    {
+      "id": "skill-1",
+      "name": "Python",
+      "category": "Backend",
+      "level": 85,
+      "visible": true
+    },
+    {
+      "id": "skill-2",
+      "name": "HTML",
+      "category": "Frontend",
+      "level": 90,
+      "visible": true
+    },
+    {
+      "id": "skill-3",
+      "name": "CSS",
+      "category": "Frontend",
+      "level": 85,
+      "visible": true
+    },
+    {
+      "id": "skill-4",
+      "name": "MySQL",
+      "category": "Databases",
+      "level": 80,
+      "visible": true
+    },
+    {
+      "id": "skill-5",
+      "name": "Firebase",
+      "category": "Databases",
+      "level": 75,
+      "visible": true
+    },
+    {
+      "id": "skill-6",
+      "name": "React Native",
+      "category": "Mobile Development",
+      "level": 80,
+      "visible": true
+    },
+    {
+      "id": "skill-7",
+      "name": "PHP",
+      "category": "Backend",
+      "level": 75,
+      "visible": true
+    }
+  ],
+  "projects": [
+    {
+      "id": "project-1",
+      "title": "Tikenter System",
+      "category": "Backend",
+      "description": "Python Desktop Application designed for ticketing and event management.",
+      "tags": [
+        "Python",
+        "Tkinter",
+        "SQLite"
+      ],
+      "images": [
+        "./assets/c5877107-1c10-4f44-bbee-ad54e99e2cff-History_Repair.png"
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/Leype83936222",
+      "featured": true,
+      "visible": true
+    },
+    {
+      "id": "project-2",
+      "title": "React Native App",
+      "category": "Mobile Development",
+      "description": "Mobile Application Project built with React Native for cross-platform efficiency.",
+      "tags": [
+        "React Native",
+        "Firebase",
+        "Expo"
+      ],
+      "images": [
+        "./assets/5ab3d2e1-cb61-4470-be1c-51b72c7a0167.jpg"
+      ],
+      "liveUrl": "",
+      "githubUrl": "https://github.com/Leype83936222",
+      "featured": true,
+      "visible": true
+    }
+  ],
+  "experience": [
+    {
+      "id": "exp-1",
+      "role": "Software Developer Intern",
+      "company": "Tech Solutions Corp",
+      "duration": "Dec 2025 - Mar 2026",
+      "description": "Assisted in the design and development of desktop applications using Python. Collaborated with front-end developers to integrate React Native components.",
+      "skills": [
+        "Python",
+        "React Native",
+        "Git"
+      ],
+      "visible": true
+    }
+  ],
+  "education": [
+    {
+      "id": "edu-1",
+      "degree": "Bachelor of Science in Information Technology",
+      "institution": "Caraga State University",
+      "duration": "2022 - 2026",
+      "details": "Focused on software engineering, database systems, and mobile application development. Graduated March 2026.",
+      "visible": true
+    }
+  ],
+  "certificates": [],
+  "achievements": [
+    {
+      "id": "achieve-1",
+      "title": "Best Capstone Award",
+      "organization": "University Tech Expo",
+      "date": "March 2026",
+      "description": "Awarded best desktop application for the Tikenter System.",
+      "visible": true
+    }
+  ],
+  "contact": {
+    "email": "Regiltagalogon55@gmail.com",
+    "phone": "+63 912 345 6789",
+    "address": "Caraga, Philippines",
+    "mapUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126133.45618580008!2d125.48512345678912!3d8.951234567891234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3301c123456789ab%3A0x1234567890abcdef!2sButuan%20City%2C%20Agusan%20Del%20Norte%2C%20Philippines!5e0!3m2!1sen!2s!4v1700000000000!5m2!1sen!2s",
+    "socialLinks": {
+      "github": "https://github.com/Leype83936222",
+      "linkedin": "https://linkedin.com",
+      "facebook": "https://facebook.com/RegilTagalogon",
+      "instagram": "https://instagram.com/RegilTagalogon"
+    }
+  }
+}

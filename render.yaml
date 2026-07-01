@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: regil-tagalogon-portfolio
+    runtime: node
+    repo: https://github.com/Leype83936222/regil_tagalogon_portfolio
+    plan: free
+    buildCommand: npm install && npm run build
+    startCommand: node server/index.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "3001"
